@@ -63,7 +63,7 @@ export const Login = () => {
           </div>
 
           <button className="border w-full py-4 rounded-xl bg-green-500 text-white font-semibold hover:bg-green-400 active:scale-105">
-            Sign Up
+            Log In
           </button>
         </form>
         <p className="text-center text-gray-500 mt-4">

@@ -5,7 +5,6 @@ const User = require("../models/user");
 const router = express.Router();
 const JWT_SECRET = process.env.JWT_SECRET;
 
-// GET /user/me
 router.get("/me", async (req, res) => {
   try {
     const token = req.headers.authorization?.split(" ")[1];

@@ -1,6 +1,15 @@
 "use-client";
 import { useDevices } from "../hooks/useDevices";
-import { LineChart, Line, XAxis, YAxis, ResponsiveContainer } from "recharts";
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  ResponsiveContainer,
+  CartesianGrid,
+  Legend,
+  Tooltip,
+} from "recharts";
 
 export const TempChart = () => {
   const devices = useDevices();
@@ -14,10 +23,13 @@ export const TempChart = () => {
 
   return (
     <ResponsiveContainer width="100%" height="100%">
-      <LineChart data={thermostat}>
+      <LineChart responsive data={thermostat}>
+        <CartesianGrid stroke="#aaa" strokeDasharray="5 5" fill="" />
         <XAxis dataKey="time" />
         <YAxis />
-        <Line dataKey="value" stroke="blue" />
+        <Line dataKey="value" stroke="red" name="Temperature" strokeWidth={2} />
+        <Legend align="center" iconType="triangle" />
+        <Tooltip />
       </LineChart>
     </ResponsiveContainer>
   );

@@ -29,28 +29,34 @@ export const Dashboard = () => {
   }, []);
 
   return (
-    <div className="p-4 space-y-4">
-      <div className="bg-white rounded-xl p-4 h-50 flex justify-center items-center ">
-        <h1 className="text-6xl font-semibold">
-          HELLO <span className="text-blue-500">{username}</span>
+    <div className="p-4 space-y-4 mt-12">
+      <div className="h-50 flex justify-center items-center">
+        <h1 className="text-6xl font-extrabold text-white">
+          HELLO <span className="text-blue-500">{username.toUpperCase()}</span>
         </h1>
       </div>
       <div className="grid grid-cols-2 gap-4 text-3xl">
-        <div className="bg-white h-[350px] flex flex-col  p-4 rounded-xl">
+        <div className="bg-white h-[350px] flex flex-col p-4 rounded-lg">
           <h1>Dashboard</h1>
           <p></p>
         </div>
-        <div className="bg-white h-[350px] max-w-full p-4 rounded-xl">
-          <h2>Temperature</h2>
-          <TempChart />
+        <div className="bg-white h-[350px] max-w-full p-4 rounded-lg flex flex-col">
+          <h2 className="mb-4 font-semibold">Temp</h2>
+          <div className="flex-1">
+            <TempChart />
+          </div>
         </div>
-        <div className="bg-white h-[350px] max-w-full p-4 rounded-xl">
-          <h2>Air Quality</h2>
-          <AirChart />
+        <div className="bg-white h-[350px] max-w-full p-4 rounded-lg flex flex-col">
+          <h2 className="mb-4 font-semibold">Air Quality</h2>
+          <div className="flex-1">
+            <AirChart />
+          </div>
         </div>
-        <div className="bg-white h-[350px] max-w-full p-4 rounded-xl">
-          <h2>Room Occupancy</h2>
-          <OccupancyChart />
+        <div className="bg-white h-[350px] max-w-full p-4 rounded-lg flex flex-col">
+          <h2 className="mb-4 font-semibold">Occupancy</h2>
+          <div className="flex-1">
+            <OccupancyChart />
+          </div>
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 "use-client";
 import { useDevices } from "../hooks/useDevices";
-import { LineChart, Line, XAxis, YAxis, ResponsiveContainer } from "recharts";
+import { Line, XAxis, YAxis, ResponsiveContainer, BarChart, CartesianGrid, Legend, Bar, Tooltip } from "recharts";
 
 export const OccupancyChart = () => {
   const devices = useDevices();
@@ -12,12 +12,15 @@ export const OccupancyChart = () => {
     }));
 
   return (
-    <ResponsiveContainer>
-      <LineChart width="100%" height={300} data={room}>
+    <ResponsiveContainer width="100%" height="100%">
+      <BarChart responsive data={room}>
+        <CartesianGrid stroke="#aaa" strokeDasharray="5 5" />
         <XAxis dataKey="time" />
         <YAxis />
-        <Line dataKey="value" stroke="blue" />
-      </LineChart>
+        <Bar dataKey="value" fill="orange" stroke="black" name="Occupancy" />
+        <Legend align="center" />
+        <Tooltip />
+      </BarChart>
     </ResponsiveContainer>
   );
 };

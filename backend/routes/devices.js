@@ -5,7 +5,7 @@ router.get("/", (req, res) => {
   const data = [
     {
       device: "Thermostat",
-      value: 20 + Math.random() * 5,
+      value: Math.floor(Math.random() * (90 - 60 + 1)) + 60,
       timestamp: Date.now(),
     },
     {
