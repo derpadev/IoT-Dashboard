@@ -1,5 +1,4 @@
 "use-client";
-import { useDevices } from "../hooks/useDevices";
 import {
   LineChart,
   Line,
@@ -11,14 +10,7 @@ import {
   Tooltip,
 } from "recharts";
 
-export const AirChart = () => {
-  const devices = useDevices();
-  const air = devices
-    .filter((d) => d.device === "Air Quality Monitor")
-    .map((d) => ({
-      time: new Date(d.timestamp).toLocaleTimeString(),
-      value: d.value.toFixed(1),
-    }));
+export const AirChart = ({air}) => {
 
   return (
     <ResponsiveContainer width="100%" height="100%">
@@ -28,11 +20,10 @@ export const AirChart = () => {
         <YAxis />
         <Line
           dataKey="value"
-          stroke="green"
+          stroke="#7EA874"
           name="Air Quality"
-          strokeWidth={2}
+          strokeWidth={6}
         />
-        <Legend align="center" iconType="circle" />
         <Tooltip />
       </LineChart>
     </ResponsiveContainer>

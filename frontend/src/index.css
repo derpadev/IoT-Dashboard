@@ -1,5 +1,22 @@
 @import "tailwindcss";
 
+@theme {
+  --animate-fade-in-delay-1: fade-in 0.7s ease-out 0.2s forwards;
+  --animate-fade-in-delay-2: fade-in 0.7s ease-out 1.0s forwards;
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
 :root {
-  background-color: #242424;
+  background-color: #171717;
+}
+
+html {
+  @apply scroll-smooth;
 }

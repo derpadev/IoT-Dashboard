@@ -10,7 +10,7 @@ router.get("/", (req, res) => {
     },
     {
       device: "Air Quality Monitor",
-      value: 50 + Math.random() * 20,
+      value: 40 + Math.random() * 20,
       timestamp: Date.now(),
     },
     {

@@ -1,5 +1,4 @@
-"use-client";
-import { useDevices } from "../hooks/useDevices";
+"use client";
 import {
   LineChart,
   Line,
@@ -11,24 +10,14 @@ import {
   Tooltip,
 } from "recharts";
 
-export const TempChart = () => {
-  const devices = useDevices();
-  const thermostat = devices
-    .filter((d) => d.device === "Thermostat")
-    .map((d) => ({
-      time: new Date(d.timestamp).toLocaleTimeString(),
-      value: d.value,
-      id: d.id,
-    }));
-
+export const TempChart = ({ thermostat } ) => {
   return (
     <ResponsiveContainer width="100%" height="100%">
-      <LineChart responsive data={thermostat}>
+      <LineChart data={thermostat}>
         <CartesianGrid stroke="#aaa" strokeDasharray="5 5" fill="" />
         <XAxis dataKey="time" />
         <YAxis />
-        <Line dataKey="value" stroke="red" name="Temperature" strokeWidth={2} />
-        <Legend align="center" iconType="triangle" />
+        <Line dataKey="value" stroke="#EDD769" name="Temperature" strokeWidth={6} />
         <Tooltip />
       </LineChart>
     </ResponsiveContainer>

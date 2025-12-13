@@ -9,7 +9,7 @@ export const Home = () => {
           <h1 className="text-6xl font-extrabold text-white text-center">
             Welcome to SmartSpace <br /> Your Real-Time IoT Dashboard
           </h1>
-          <p className="text-2xl text-white font-normal text-center mt-2 px-130">
+          <p className="text-2xl text-white font-normal text-center max-w-7xl mt-2">
             Monitor your environment in real time. SmartSpace shows temperature,
             air quality, and occupancy through a clean, interactive dashboard
             built with modern web technologies.
