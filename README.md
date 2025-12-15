@@ -43,6 +43,7 @@ The **IoT Device Monitor Dashboard** is an interactive web application that visu
 
 ## Project Structure
 
+```
 iot-dashboard/
 ├── backend/
 │   ├── models/            # MongoDB models
@@ -87,6 +88,7 @@ iot-dashboard/
 │
 ├── README.md
 └── .gitignore
+```
 
 
 
