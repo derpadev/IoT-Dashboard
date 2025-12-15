@@ -12,10 +12,9 @@ The **IoT Device Monitor Dashboard** is an interactive web application that visu
 
 - **Authentication**
   - JWT-based login system
-  - Role-based access (admin/user)
   
 - **IoT Device Data**
-  - Mock IoT device data stream using polling (or WebSockets)
+  - Mock IoT device data stream using polling 
   - Live updates for multiple devices (Thermostat, Air Quality Monitor, Room Occupancy)
   
 - **Visualization**
@@ -24,11 +23,9 @@ The **IoT Device Monitor Dashboard** is an interactive web application that visu
   - Supports dynamic updates as new data arrives
 
 - **Reporting**
-  - Export reports as PDF or CSV
-  - View data from the last 24 hours
+  - Export reports as CSV
 
 - **Responsive Design**
-  - Dashboard layout adapts to different screen sizes
   - Tailwind CSS for clean, modern styling
 
 ---
@@ -39,7 +36,6 @@ The **IoT Device Monitor Dashboard** is an interactive web application that visu
 - **Backend:** Node.js, Express  
 - **Database:** MongoDB  
 - **Authentication:** JWT  
-- **Optional:** WebSockets for real-time streaming  
 
 ---
 
