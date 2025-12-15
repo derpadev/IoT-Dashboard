@@ -5,7 +5,6 @@ import {
   ResponsiveContainer,
   BarChart,
   CartesianGrid,
-  Legend,
   Bar,
   Tooltip,
 } from "recharts";

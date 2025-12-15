@@ -57,7 +57,7 @@ export const Dashboard = () => {
     <div className="p-4 space-y-4 mt-12">
       <div className="min-h-screen flex flex-col justify-center items-center">
         <h1 className="text-8xl font-extrabold text-white opacity-0 animate-fade-in-delay-1">
-          HELLO <span className="text-blue-500 ">{username.toUpperCase()}</span>
+          HELLO <span className="text-blue-500 ">{username?.toUpperCase()}</span>
         </h1>
         <p className="text-white text-3xl font-semibold mt-10 opacity-0 animate-fade-in-delay-2">
           Go To Your Dashboard

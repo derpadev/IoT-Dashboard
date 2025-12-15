@@ -6,7 +6,6 @@ import {
   YAxis,
   ResponsiveContainer,
   CartesianGrid,
-  Legend,
   Tooltip,
 } from "recharts";
 
