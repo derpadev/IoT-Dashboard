@@ -43,3 +43,58 @@ The **IoT Device Monitor Dashboard** is an interactive web application that visu
 
 ## Project Structure
 
+iot-dashboard/
+├── backend/ 
+├── frontend/ 
+├── README.md
+├── .gitignore
+
+# Backend
+
+backend/
+│ ├── models/ # MongoDB models
+│ │ ├── User.js
+│ │
+│ ├── routes/ # API route definitions
+│ │ ├── auth.js
+│ │ └── device.js
+│ │ └── user.js
+│
+├── server.js # Server entry point
+├── .env
+├── package.json
+
+# Frontend
+
+frontend/
+├── public/
+│ └── index.html
+│
+├── src/
+│ │
+│ ├── components/ # Reusable UI components
+│ │ ├── Navbar.jsx
+│ │ ├── AirChart.jsx
+│ │ └── Occupancy.jsx
+│ │ └── TempChart.jsx
+│ │
+│ │
+│ ├── hooks/ # Custom React hooks
+│ │ └── useDevices.js
+│ │
+│ ├── pages/ # Page-level components
+│ │ ├── Login.jsx
+│ │ ├── Signup.jsx
+│ │ ├── Dashboard.jsx
+│ │ └── Home.jsx
+│ │
+│ │
+│ ├── App.jsx
+│ ├── main.jsx
+│ └── index.css
+│
+├── package.json
+├── tailwind.config.js
+└── vite.config.js
+
+
